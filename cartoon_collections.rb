@@ -1,8 +1,9 @@
 def roll_call_dwarves(array)# code an argument here
   # Your code here
   array.each_with_index{|item,index|
-
-  puts "#{index+1}  #{item}"
+    if index > array.length/2
+      
+    puts "#{index+1}  #{item}"
  
   }
 end
@@ -20,10 +21,14 @@ end
 
 def find_the_cheese(array)# code an argument here
   # the array below is here to help
-  cheese_types = ["cheddar", "gouda", "camembert"]
+  cheese_types = ["cheddar", "gouda", "camembert","Swiss"]
 array.find{|item| cheese_types.include?(item)}
 end
 
 soup = ["tomato soup","cheddar", "gouda", "oyster crackers", "gouda"]
 find_the_cheese(soup)
 
+def words_with_b(words)
+  words.select{|word| word.start_with("b")}
+  
+end
